@@ -6,8 +6,8 @@ class Square:
     """
     def __init__(self, size=0):
         """Method that stores the size of the square
-        Attribute:
-        __size (int): size of square
+        Attributes:
+            __size (int): size of square
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
