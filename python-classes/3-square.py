@@ -2,7 +2,7 @@
 
 
 class Square:
-    """defines a Square
+    """Defines a Square
     Attributes:
         __size (int): size of the square
         area (int): area of the square
