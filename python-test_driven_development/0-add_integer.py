@@ -6,11 +6,11 @@
 def add_integer(a, b=98):
     """
     function that adds two numbers
-    
+
     Args:
         a: first number
         b: second number
-    
+
     Returns:
         the addition of the two numbers
 
@@ -24,4 +24,4 @@ def add_integer(a, b=98):
     elif not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
         b = int(b)
-    return(a + b)
+    return a + b
