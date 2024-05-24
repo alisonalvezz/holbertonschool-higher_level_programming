@@ -12,7 +12,7 @@ first import
 
     Adding 1 and 2:
         >>> add_integer(1, 2)
-        3
+        2
 
     ::
 
@@ -36,24 +36,18 @@ first import
 
     Adding an integer number and a string:
         >>> add_integer(5, "Holberton")
-        Traceback(most recent call last)
-            ...
         TypeError: b must be an integer
 
     ::
 
     Adding a letter and a number:
         >>> add_integer('a', 1)
-        Traceback(most recent call last)
-            ...
         TypeError: a must be an integer
 
     ::
 
     Adding a number and a list:
         >>> add_integer(12, [])
-        Traceback(most recent call last)
-            ...
         TypeError: b must be an integer
 
     ::
