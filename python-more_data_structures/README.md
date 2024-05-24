@@ -1,12 +1,12 @@
 # Python: More data structures: Set and Dictionary
-In this project we are gonna learn about data structures; 
-- what are sets and how to use them
-- what are the most common methods of set and how to use them too
-- when to use sets and when to use lists 
-- what are dictionaries and how to use them
-- what is a key in a dictionary
-- what is lambda function
-- what are map and filter functions
+In this project we are gonna learn about data structures: 
+- What are sets and how to use them
+- What are the most common methods of set and how to use them too
+- When to use sets and when to use lists 
+- What are dictionaries and how to use them
+- What is a key in a dictionary
+- What is lambda function
+- What are map and filter functions
 
 
 ### What are sets?
