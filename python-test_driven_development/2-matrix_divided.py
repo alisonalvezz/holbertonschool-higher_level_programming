@@ -4,7 +4,6 @@ divides the elements of a matrix based on a number
 """
 
 
-
 def matrix_divided(matrix, div):
     """
     function that divides a matrix
@@ -17,7 +16,8 @@ def matrix_divided(matrix, div):
         a new matrix
 
     Raises:
-        TypeError if matrix isnt a list of integers of floats, if each row of the matrix doesnt have the same size or if div isnt a number
+        TypeError if matrix isnt a list of integers of floats, if each row of the matrix doesnt have
+        the same size or if div isnt a number
         ZeroDivisionError if div is zero
     """
     if not all(isinstance(i, list) for i in matrix) or not all(isinstance(num, (int, float)) for i in matrix for num in i):
