@@ -16,7 +16,7 @@ first import
         ZeroDivisionError: division by zero
 
     ::
-
+ && 
     Dividing by a string
        >>> matrix_divided([[1, 2, 3], [1, 2, 3]], 'a')
        Traceback (most recent call last):
