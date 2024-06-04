@@ -2,8 +2,6 @@
 """
 writes an object to a text file
 """
-
-
 import json
 
 
