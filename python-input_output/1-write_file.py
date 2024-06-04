@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-writes a string to a text file 
+writes a string to a text file
 """
 
 
