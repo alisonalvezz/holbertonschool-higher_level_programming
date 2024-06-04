@@ -1,0 +1,31 @@
+The ``BaseGeometry`` module
+==========================
+
+Using ``BaseGeometry``
+-----------------------
+
+first import
+``BaseGeometry`` from ``7-base_geometry``
+
+::
+    >>> BaseGeometry = __import__(7-base_geometry).BaseGeometry
+
+    Raising exception
+        >>> area()
+        Traceback (most recent call last)
+        Exception: area() is not implemented
+
+    Value being a string
+        >>> integer_validator('Alison', 'Alison')
+        Traceback (most recent call last)
+        TypeError: <name> must be an integer
+
+    Value being less than 0
+        >>> integer_validator('Alison', -1)
+        Traceback (most recent call last)
+        ValueError: <name> must be greater than 0
+
+    Value being 0
+        >>> integer_validator('Alison', 0)
+        Traceback (most recent call last)
+        ValueError: <name> must be greater than 0
