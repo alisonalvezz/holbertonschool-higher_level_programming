@@ -77,8 +77,7 @@ class Rectangle:
             the sum of width and height multiplied by 2
         """
         return 2 * (self.__width + self.__height)
-    
-    
+
     def __str__(self):
         """
         Returns a string representation of the object.

@@ -3,6 +3,7 @@
 defines a rectangle
 """
 
+
 class Rectangle:
     """
     defines a rectangle
@@ -30,7 +31,7 @@ class Rectangle:
         width of the rectangle
         """
         return self.__width
-        
+
     @width.setter
     def width(self, value):
         """
