@@ -1,43 +1,57 @@
 #!/usr/bin/python3
 """
-verboselist
+Verbose List class that extends the built-in list class with additional verbose output.
 """
 
 class VerboseList(list):
     """
-    list class
+    A list subclass that prints verbose messages for append, extend, remove, and pop operations.
     """
 
     def append(self, obj):
         """
-        append
+        Appends an object to the list and prints a message.
+        
+        Args:
+            obj: object to append to the list.
         """
-
         super().append(obj)
-        print("Added[{}] to the list".format(obj))
+        print(f"Added [{obj}] to the list")
 
-    def extend(self, obj):
+    def extend(self, iterable):
         """
-        extend
+        Extends the list with objects from an iterable and prints a message.
+        
+        Args:
+            iterable: Iterable containing objects to extend the list with.
         """
-
-        super().extend(obj)
-        print("Extended the list with [{}] items".format(len(obj)))
+        super().extend(iterable)
+        print(f"Extended the list with [{len(iterable)}] items")
 
     def remove(self, obj):
         """
-        remove
+        Removes the first occurrence of an object from the list and prints a message.
+        
+        Args:
+            obj: Object to remove from the list.
         """
-
         super().remove(obj)
-        print("Removed [{}] from the list".format(obj))
+        print(f"Removed [{obj}] from the list")
 
-    def pop(self, obj=-1):
+    def pop(self, index=-1):
         """
-        pop
+        Removes and returns the item at the specified index from the list and prints a message.
+        If no index is specified, removes and returns the last item in the list.
+        
+        Args:
+            index: Index of the item to pop from the list (default is -1).
+
+        Returns:
+            object: Item popped from the list.
         """
-        if obj is None:
-            print(f"Popped [{self[-1]}] from the list")
+        popped_item = super().pop(index)
+        if index == -1:
+            print(f"Popped [{popped_item}] from the list")
         else:
-            print("Popped [{}] from the list".format(self[obj]))
-        super().pop(obj)
+            print(f"Popped [{popped_item}] from index [{index}] in the list")
+        return popped_item
