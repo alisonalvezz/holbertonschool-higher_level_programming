@@ -1,2 +1,2 @@
 -- full table
-SHOW COLUMNS FROM first_table
+SHOW FULL tables;
