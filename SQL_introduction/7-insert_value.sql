@@ -1,4 +1,2 @@
 -- insert value
-ALTER TABLE first_table;
-ADD id 89;
-ADD name 'Best School';
+INSERT INTO first_table (id, name) VALUES ('89', 'Best School');
