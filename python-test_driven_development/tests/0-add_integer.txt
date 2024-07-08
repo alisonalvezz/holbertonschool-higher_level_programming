@@ -70,4 +70,4 @@ first import
     Overflowing, float inf to integer
         >>> add_integer(float('inf'))
         Traceback (most recent call last):
-        OverFlowError: cannot convert float infinity to integer
+        OverflowError: cannot convert float infinity to integer
