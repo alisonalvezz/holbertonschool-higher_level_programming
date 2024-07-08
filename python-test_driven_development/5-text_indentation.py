@@ -18,17 +18,8 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     punctuation = [":", "?", "."]
-    lines = []
-    line = ""
 
-    for char in text:
-        line += char
-        if char in punctuation:
-            lines.append(line.strip())
-            line = ""
+    for i in punctuation:
+        text = (i + "\n\n").join([j.strip(" ") for j in text.split(i)])
 
-    if line:
-        lines.append(line.strip())
-
-    for line in lines:
-        print(line)
+    print(f"{text}", end='')
