@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
-
 class Square:
     """Defines a Square
     Attributes:
         __size (int): size of the square
-        area (int): area of the square
     """
     def __init__(self, size=0):
         """
@@ -26,7 +24,7 @@ class Square:
 
     def area(self):
         """
-        calculates and return the area of the square
+        Calculates and returns the area of the square
 
         Returns:
             int: the area of the square (size ** 2)
