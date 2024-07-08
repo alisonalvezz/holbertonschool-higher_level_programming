@@ -16,12 +16,16 @@ def matrix_divided(matrix, div):
         a new matrix
 
     Raises:
-        TypeError if matrix isnt a list of integers of floats, if each row of the matrix doesnt have
+        TypeError if matrix isnt a list of integers of floats,
+        if each row of the matrix doesnt have
         the same size or if div isnt a number
         ZeroDivisionError if div is zero
     """
-    if not all(isinstance(i, list) for i in matrix) or not all(isinstance(num, (int, float)) for i in matrix for num in i):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(isinstance(i, list) for i in matrix) \
+        or not all(isinstance(num, (int, float))
+                   for i in matrix for num in i):
+        raise TypeError("matrix must be a matrix (list of lists) \
+                        of integers/floats")
     if not all(len(i) == len(matrix[0]) for i in matrix):
         raise TypeError("Each row of the matrix must have the same size")
     if not isinstance(div, (int, float)):
