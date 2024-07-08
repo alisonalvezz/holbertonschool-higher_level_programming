@@ -1,18 +1,12 @@
-#!/usr/bin/python3
-"""
-indents a text
-"""
-
-
 def text_indentation(text):
     """
-    indents a text
+    Indents a text based on specific punctuation marks.
 
     Args:
-        text: text to be indented
+        text (str): The text to be indented.
 
     Raises:
-        TypeError: if text isnt a string
+        TypeError: If text is not a string.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
@@ -24,7 +18,7 @@ def text_indentation(text):
     for char in text:
         line += char
         if char in punctuation:
-            lines.append(line.strip() + "\n\n")
+            lines.append(line.strip())
             line = ""
 
     if line:
