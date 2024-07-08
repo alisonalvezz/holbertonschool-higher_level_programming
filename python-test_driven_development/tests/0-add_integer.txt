@@ -64,3 +64,10 @@ first import
     Subtracting 98 and 1:
         >>> add_integer(-1)
         97
+    
+    ::
+
+    Overflowing, float inf to integer
+        >>> add_integer(float('inf'))
+        Traceback (most recent call last):
+        OverFlowError: cannot convert float infinity to integer
