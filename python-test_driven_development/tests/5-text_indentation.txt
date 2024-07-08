@@ -32,5 +32,6 @@ first import:
     ::
 
     If its a blank line
-        >>> text_indentation("\n")
+        >>> text_indentation(".")
+        .
         <BLANKLINE>
