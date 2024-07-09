@@ -6,7 +6,7 @@ class mylist that inherits from list
 class MyList(list):
     """ My list"""
 
-    def printed_sorted(self):
+    def print_sorted(self):
         """ returns its list"""
 
         print(sorted(self))
