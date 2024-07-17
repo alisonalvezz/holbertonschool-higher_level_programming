@@ -8,9 +8,9 @@ from sqlalchemy.orm import Session, sessionmaker
 from model_state import Base, State
 
 
-def list_state(username, password, db_name):
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}' 
-                           .format(username, password, db_name, pool_pre_ping=True))
+def list_state(user, passw, db):
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
+                           .format(user, passw, db, pool_pre_ping=True))
 
     session = Session(engine)
 
@@ -18,6 +18,7 @@ def list_state(username, password, db_name):
         print(f"{state.id}: {state.name}")
 
     session.close()
+
 
 if __name__ == "__main__":
     user = argv[1]
