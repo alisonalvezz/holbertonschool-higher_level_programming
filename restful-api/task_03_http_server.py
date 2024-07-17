@@ -11,7 +11,7 @@ class CustomRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_header('Content-type', 'application/json')
             self.end_headers()
             self.wfile.write(json.dumps(
-                {"name": "John", "age": "30", "city": "New York"}).encode()
+                {"name": "John", "age": 30, "city": "New York"}).encode()
             )
         
         elif self.path == '/info':
