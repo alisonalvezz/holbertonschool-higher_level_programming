@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
-"""Write a script that takes in an argument and displays 
-all values in the states table of hbtn_0e_0_usa where name matches the argument."""
+"""Write a script that takes in an argument and displays
+all values in the states table of hbtn_0e_0_usa
+where name matches the argument."""
 
 
 def states(username, password, db_name, state_name):
@@ -18,16 +19,17 @@ def states(username, password, db_name, state_name):
     """
 
     database = MySQLdb.connect(
-        host='localhost', 
+        host='localhost',
         port=3306,
         user=username,
-        passwd=password, 
+        passwd=password,
         db=db_name
     )
 
     cursor = database.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id".format(state_name))
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY"
+                   + " '{}' ORDER BY states.id".format(state_name))
 
     rows = cursor.fetchall()
 
@@ -36,6 +38,7 @@ def states(username, password, db_name, state_name):
 
     cursor.close()
     database.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]

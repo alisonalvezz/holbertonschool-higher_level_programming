@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import MySQLdb
 import sys
-"""script that takes in arguments and displays all values in the states 
-table of hbtn_0e_0_usa where name matches the argument and that is safe from MySQL injections"""
+"""script that takes in arguments and displays all values in the states
+table of hbtn_0e_0_usa where name matches the argument and that
+is safe from MySQL injections"""
 
 
 def states(username, password, db_name, state_name):
@@ -18,10 +19,10 @@ def states(username, password, db_name, state_name):
     """
 
     database = MySQLdb.connect(
-        host='localhost', 
+        host='localhost',
         port=3306,
         user=username,
-        passwd=password, 
+        passwd=password,
         db=db_name
     )
 
@@ -39,6 +40,7 @@ def states(username, password, db_name, state_name):
     cursor.close()
 
     database.close()
+
 
 if __name__ == "__main__":
     username = sys.argv[1]

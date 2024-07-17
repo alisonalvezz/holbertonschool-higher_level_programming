@@ -20,8 +20,8 @@ def states(username, password, db_name):
         host='localhost',
         port=3306,
         user=username,
-        passwd=password,  # Correct parameter name
-        db=db_name  # Correct parameter name
+        passwd=password,
+        db=db_name
     )
 
     cursor = database.cursor()
@@ -37,9 +37,9 @@ def states(username, password, db_name):
     database.close()
 
 
-if __name__ == "__main__":  # Correct indentation
+if __name__ == "__main__":
     user = sys.argv[1]
-    passwd = sys.argv[2]  # Use a different name to avoid confusion with the password keyword
+    passwd = sys.argv[2]
     db_name = sys.argv[3]
 
     states(user, passwd, db_name)

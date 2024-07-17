@@ -25,10 +25,10 @@ def states(username, password, db_name):
     cursor = database.cursor()
 
     query = ("SELECT cities.id, cities.name, states.name " +
-                   "FROM cities INNER JOIN states " +
-                   "ON cities.state_id = state_id " +
-                   "ORDER BY cities.id")
-    
+             "FROM cities INNER JOIN states " +
+             "ON cities.state_id = states.id " +
+             "ORDER BY cities.id")
+
     cursor.execute(query)
 
     rows = cursor.fetchall()
@@ -39,6 +39,7 @@ def states(username, password, db_name):
     cursor.close()
 
     database.close()
+
 
 if __name__ == "__main__":
     user = sys.argv[1]
